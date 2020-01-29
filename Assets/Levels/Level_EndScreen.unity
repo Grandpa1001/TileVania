@@ -3236,14 +3236,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656096836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e396d5de656c646a5ef34b47459d8b, type: 3}
+  m_Script: {fileID: 11500000, guid: b952aff6ed35886408a59bec0552ae83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SplashScreen: 0
-  MainMenu: 0
-  Poziom_1_1: 0
-  Poziom_1_2: 0
-  EndScreen: 0
 --- !u!1 &1688231930
 GameObject:
   m_ObjectHideFlags: 0
