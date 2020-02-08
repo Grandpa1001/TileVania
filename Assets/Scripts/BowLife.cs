@@ -9,6 +9,7 @@ public class BowLife : MonoBehaviour
 
   public Transform arrow_attackPos;
   public LayerMask arrow_whatIsEnemies;
+  public LayerMask arrow_whatIsObjectToDestroy;
   public float arrow_attackRangeX;
   public float arrow_attackRangeY;
   public int arrow_damage;
@@ -27,6 +28,7 @@ public class BowLife : MonoBehaviour
       HitGround();
       HitEnemy();
       FlipSprite();
+      HitObjectToDestroy();
   }
 
 
@@ -43,7 +45,14 @@ public class BowLife : MonoBehaviour
       //FindObjectOfType<Enemy>().ProcessEnemyDeath();
       return;}
     }
+    private void HitObjectToDestroy(){
+      if(boxHitArrow.IsTouchingLayers(LayerMask.GetMask("ObjectToDestroy"))){
+       DestroyObject(gameObject);
 
+        Hit_Arrow();
+        //FindObjectOfType<Enemy>().ProcessEnemyDeath();
+        return;}
+    }
 
 
   private void FlipSprite(){
@@ -60,6 +69,13 @@ public void Hit_Arrow(){
 			for (int i=0; i < enemiesToDamage.Length; i++){
 			enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(arrow_damage);
 			}
+      Collider2D[] objectToDestroy = Physics2D.OverlapBoxAll(arrow_attackPos.position, new Vector2(arrow_attackRangeX, arrow_attackRangeY),0,arrow_whatIsObjectToDestroy);
+			for (int i=0; i < objectToDestroy.Length; i++){
+			objectToDestroy[i].GetComponent<ObjectToCanDestroy>().TakeDamage(arrow_damage);
+			}
+
+
+
 		}
 
 void OnDrawGizmosSelected(){

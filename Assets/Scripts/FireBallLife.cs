@@ -10,6 +10,7 @@ public class FireBallLife : MonoBehaviour
 
     public Transform fireball_attackPos;
     public LayerMask fireball_whatIsEnemies;
+    public LayerMask fireball_whatIsObjectToDestroy;
     public float fireball_attackRangeX;
     public float fireball_attackRangeY;
     public int fireball_damage;
@@ -30,6 +31,7 @@ public class FireBallLife : MonoBehaviour
         HitGround();
         HitEnemy();
         FlipSprite();
+        HitObjectToDestroy();
     }
 
     private void HitGround()
@@ -46,6 +48,16 @@ public class FireBallLife : MonoBehaviour
         //FindObjectOfType<Enemy>().ProcessEnemyDeath();
         return;}
     }
+    private void HitObjectToDestroy(){
+      if(boxHitBall.IsTouchingLayers(LayerMask.GetMask("ObjectToDestroy"))){
+       DestroyObject(gameObject);
+
+        Hit_FireBall();
+        //FindObjectOfType<Enemy>().ProcessEnemyDeath();
+        return;}
+    }
+
+
 
 
     private void FlipSprite(){
@@ -63,6 +75,13 @@ public void Hit_FireBall(){
 			for (int i=0; i < enemiesToDamage.Length; i++){
 			enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(fireball_damage);
 			}
+      Collider2D[] objectToDestroy = Physics2D.OverlapBoxAll(fireball_attackPos.position, new Vector2(fireball_attackRangeX, fireball_attackRangeY),0,fireball_whatIsObjectToDestroy);
+			for (int i=0; i < objectToDestroy.Length; i++){
+			objectToDestroy[i].GetComponent<ObjectToCanDestroy>().TakeDamage(fireball_damage);
+			}
+
+
+
 		}
 
 void OnDrawGizmosSelected(){

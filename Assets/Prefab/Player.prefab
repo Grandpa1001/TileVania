@@ -231,6 +231,9 @@ MonoBehaviour:
   sword_whatIsEnemies:
     serializedVersion: 2
     m_Bits: 4096
+  sword_whatIsObjectToDestroy:
+    serializedVersion: 2
+    m_Bits: 131072
   sword_attackRangeX: 0.86
   sword_attackRangeY: 0.66
   sword_damage: 2

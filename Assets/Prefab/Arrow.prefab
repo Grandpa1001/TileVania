@@ -167,6 +167,9 @@ MonoBehaviour:
   arrow_whatIsEnemies:
     serializedVersion: 2
     m_Bits: 4096
+  arrow_whatIsObjectToDestroy:
+    serializedVersion: 2
+    m_Bits: 131072
   arrow_attackRangeX: 0.29
   arrow_attackRangeY: 0.24
   arrow_damage: 1

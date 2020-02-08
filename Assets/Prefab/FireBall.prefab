@@ -214,6 +214,9 @@ MonoBehaviour:
   fireball_whatIsEnemies:
     serializedVersion: 2
     m_Bits: 4096
+  fireball_whatIsObjectToDestroy:
+    serializedVersion: 2
+    m_Bits: 131072
   fireball_attackRangeX: 0.23
   fireball_attackRangeY: 0.44
   fireball_damage: 10

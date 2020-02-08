@@ -47,6 +47,7 @@ public float bow_nextFireTime = 0;
 public float sword_startTimeBtwAttack;
 public Transform sword_attackPos;
 public LayerMask sword_whatIsEnemies;
+public LayerMask sword_whatIsObjectToDestroy;
 public float sword_attackRangeX;
 public float sword_attackRangeY;
 public int sword_damage;
@@ -183,11 +184,19 @@ public void Hit_Sword(){
 			//dodaj animacje trzęsienia się
 			Debug.Log("SWORD hit"+ sword_damage.ToString());
 			myAnimator.SetTrigger("Sword");
-
 			Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(sword_attackPos.position, new Vector2(sword_attackRangeX, sword_attackRangeY),0,sword_whatIsEnemies);
 			for (int i=0; i < enemiesToDamage.Length; i++){
-			enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(sword_damage);
-			}
+						Debug.Log("Hit Enemy");
+					enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(sword_damage);
+				}
+
+			Collider2D[] objectToDamage = Physics2D.OverlapBoxAll(sword_attackPos.position, new Vector2(sword_attackRangeX, sword_attackRangeY),0,sword_whatIsObjectToDestroy);
+				for (int i=0; i < objectToDamage.Length; i++){
+						objectToDamage[i].GetComponent<ObjectToCanDestroy>().TakeDamage(sword_damage);
+					Debug.Log("Hit Object");
+					}
+
+			
 		}
 		sword_timeBtwAttack = sword_startTimeBtwAttack;
 
