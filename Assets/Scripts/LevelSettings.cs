@@ -19,15 +19,15 @@ public class LevelSettings : MonoBehaviour
   private GameObject UI_Canvas;
 
 
-
   public int StartScreen;
   public int MainMenu;
   public int Poziom_1_1;
   public int Poziom_1_2;
+  public int Poziom_1_3;
+  public int Poziom_1_4;
+  public int Poziom_2_1;
 //..
   public  int EndScreen;
-
-
     void Start()
     {
 
@@ -38,12 +38,43 @@ public class LevelSettings : MonoBehaviour
       BowUI = GameObject.Find("GameSession/Joystick canvas/Button_Arrow");
       SwordUI= GameObject.Find("GameSession/Joystick canvas/Button_Sword");
       UI_Canvas = GameObject.Find("GameSession/UI_Canvas");
+
     }
 
+
+
 void Update(){
+CheckWhatLevelIsNow();
+
+
+}
+
+  public void StartFirstLevel(){
+	SceneManager.LoadScene(Poziom_1_1);
+}
+
+public void StartNextLevel(){
+  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+}
+
+public void LoadMainMenu(){
+	//navi_MainMenu = GameObject.Find("GameSession").GetComponent<LevelSettings>().MainMenu;
+	SceneManager.LoadScene(MainMenu);
+}
+
+public void ExitGame(){
+Debug.Log("EndGame");
+	 Application.Quit();
+}
+
+public void GotoExitGameView(){
+	SceneManager.LoadScene(EndScreen);
+}
+
+
+
+void CheckWhatLevelIsNow(){
   numberCurrentLevel =  SceneManager.GetActiveScene().buildIndex;
-
-
   if(numberCurrentLevel == StartScreen ){
     UI_Canvas.SetActive(false);
     KnobUI.SetActive(false);
@@ -74,31 +105,46 @@ void Update(){
     BowUI.SetActive(false);
     SwordUI.SetActive(false);
   }
+    //Drugi Poziom Miecz
+  if(numberCurrentLevel == Poziom_1_2){
+
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(false);
+    BowUI.SetActive(false);
+    //SwordUI.SetActive(false); do zdobycia w tym poziomie
+  }
+
+  if(numberCurrentLevel == Poziom_1_3){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(false);
+    BowUI.SetActive(false);
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_1_4){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(false);
+    BowUI.SetActive(false);
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_2_1){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(false);
+    //BowUI.SetActive(false); do zdobycia na tym poziomie
+    SwordUI.SetActive(true);
+  }
 
 }
-
-  public void StartFirstLevel(){
-	SceneManager.LoadScene(Poziom_1_1);
-}
-
-public void StartNextLevel(){
-  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-}
-
-public void LoadMainMenu(){
-	//navi_MainMenu = GameObject.Find("GameSession").GetComponent<LevelSettings>().MainMenu;
-	SceneManager.LoadScene(MainMenu);
-}
-
-public void ExitGame(){
-Debug.Log("EndGame");
-	 Application.Quit();
-}
-
-public void GotoExitGameView(){
-	SceneManager.LoadScene(EndScreen);
-}
-
-
 
 }

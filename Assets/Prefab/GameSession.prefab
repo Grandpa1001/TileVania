@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7a524f266f35349992b0c4dc0ff7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 3
+  playerLives: 10
   score: 0
   levelNumber: 0
   livesText: {fileID: 607218821}
@@ -1568,6 +1568,9 @@ MonoBehaviour:
   MainMenu: 1
   Poziom_1_1: 2
   Poziom_1_2: 3
+  Poziom_1_3: 4
+  Poziom_1_4: 5
+  Poziom_2_1: 6
   EndScreen: 8
 --- !u!114 &1986105157
 MonoBehaviour:
