@@ -28,6 +28,9 @@ public class LevelSettings : MonoBehaviour
   public int Poziom_2_1;
 //..
   public  int EndScreen;
+
+  public bool TurnOffUIAll = false;
+
     void Start()
     {
 
@@ -41,7 +44,8 @@ public class LevelSettings : MonoBehaviour
 
     }
 
-
+public void TurnOffUIChange(){TurnOffUIAll = true;}
+public void TurnONUIChange(){TurnOffUIAll = false;}
 
 void Update(){
 CheckWhatLevelIsNow();
@@ -75,6 +79,17 @@ public void GotoExitGameView(){
 
 void CheckWhatLevelIsNow(){
   numberCurrentLevel =  SceneManager.GetActiveScene().buildIndex;
+
+  if(TurnOffUIAll){
+    UI_Canvas.SetActive(false);
+    KnobUI.SetActive(false);
+    KnobBackgroundUI.SetActive(false);
+    FireBallUI.SetActive(false);
+    BowUI.SetActive(false);
+    SwordUI.SetActive(false);
+    JumpUI.SetActive(false);
+    }else{
+
   if(numberCurrentLevel == StartScreen ){
     UI_Canvas.SetActive(false);
     KnobUI.SetActive(false);
@@ -84,6 +99,7 @@ void CheckWhatLevelIsNow(){
     SwordUI.SetActive(false);
     JumpUI.SetActive(false);
     }
+
 
   if(numberCurrentLevel == MainMenu ){
     UI_Canvas.SetActive(false);
@@ -144,6 +160,8 @@ void CheckWhatLevelIsNow(){
     //BowUI.SetActive(false); do zdobycia na tym poziomie
     SwordUI.SetActive(true);
   }
+
+}
 
 }
 

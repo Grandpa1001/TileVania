@@ -25,8 +25,9 @@ public void Save(){
 }
 
 public void Load(){
-  if(PlayerPrefs.HasKey("save")){
-    state = HelperScript.Deserialize<SaveState>(PlayerPrefs.GetString("save"));
+  if(PlayerPrefs.HasKey("app")){
+    state = HelperScript.Deserialize<SaveState>(PlayerPrefs.GetString("app"));
+    Debug.Log("Załadowano istniejacy");
   }else{
     state = new SaveState();
     Save();

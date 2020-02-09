@@ -11,6 +11,7 @@ public class ModalWindowSettings : MonoBehaviour
   private GameObject ModalL_1_2;
   private GameObject GameSession;
 
+
     void Start()
     {
 
