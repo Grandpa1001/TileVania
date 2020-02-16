@@ -26,6 +26,14 @@ public class LevelSettings : MonoBehaviour
   public int Poziom_1_3;
   public int Poziom_1_4;
   public int Poziom_2_1;
+  public int Poziom_2_2;
+  public int Poziom_2_3;
+  public int Poziom_2_4;
+  public int Poziom_3_1;
+  public int Poziom_3_2;
+  public int Poziom_3_3;
+  public int Poziom_3_4;
+  public int Poziom_TEST;
 //..
   public  int EndScreen;
 
@@ -158,6 +166,79 @@ void CheckWhatLevelIsNow(){
     JumpUI.SetActive(true);
     FireBallUI.SetActive(false);
     //BowUI.SetActive(false); do zdobycia na tym poziomie
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_2_2){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(false);
+    BowUI.SetActive(true);
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_2_3){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(false);
+    BowUI.SetActive(true);
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_2_4){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(false);
+    BowUI.SetActive(true);
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_3_1){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+  //  FireBallUI.SetActive(false); do zdobycia na tym poziomie
+    BowUI.SetActive(true);
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_3_2){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(true);
+    BowUI.SetActive(true);
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_3_3){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(true);
+    BowUI.SetActive(true);
+    SwordUI.SetActive(true);
+  }
+  if(numberCurrentLevel == Poziom_3_4){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(true);
+    BowUI.SetActive(true);
+    SwordUI.SetActive(true);
+  }
+
+  if(numberCurrentLevel == Poziom_TEST){
+    UI_Canvas.SetActive(true);
+    KnobUI.SetActive(true);
+    KnobBackgroundUI.SetActive(true);
+    JumpUI.SetActive(true);
+    FireBallUI.SetActive(true);
+    BowUI.SetActive(true);
     SwordUI.SetActive(true);
   }
 
