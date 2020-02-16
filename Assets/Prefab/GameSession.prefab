@@ -2626,6 +2626,7 @@ MonoBehaviour:
   Poziom_3_3: 12
   Poziom_3_4: 13
   Poziom_TEST: 14
+  Poziom_Death: 17
   EndScreen: 16
   TurnOffUIAll: 0
 --- !u!114 &1986105157

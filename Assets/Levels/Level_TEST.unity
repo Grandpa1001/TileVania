@@ -12246,15 +12246,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4430274621218876, guid: d3de48d9099de8d4a8398effe25dcb02, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430274621218876, guid: d3de48d9099de8d4a8398effe25dcb02, type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4430274621218876, guid: d3de48d9099de8d4a8398effe25dcb02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.450345
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430274621218876, guid: d3de48d9099de8d4a8398effe25dcb02, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.2
+      value: -7.480587
       objectReference: {fileID: 0}
     - target: {fileID: 4448920931326148, guid: d3de48d9099de8d4a8398effe25dcb02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12275,7 +12275,7 @@ PrefabInstance:
     - target: {fileID: 20821946921758822, guid: d3de48d9099de8d4a8398effe25dcb02,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114330244490159326, guid: d3de48d9099de8d4a8398effe25dcb02,
         type: 3}
@@ -12775,6 +12775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameSession
+      objectReference: {fileID: 0}
+    - target: {fileID: 826355048219748215, guid: a0f8daaae5d0c344d903504fcb48f657,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0f8daaae5d0c344d903504fcb48f657, type: 3}

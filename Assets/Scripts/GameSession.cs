@@ -55,8 +55,21 @@ private void TakeLife(){
 }
 
 	private void ResetGameSession(){
+		//StartCoroutine(LoadNextLevel());
 		SceneManager.LoadScene(0);
 		Destroy(gameObject);
 	}
+
+/*
+	IEnumerator DeathAnimation(){
+
+			Time.timeScale = LevelExitSlowMoFactor;
+			yield return new WaitForSecondsRealtime(LevelLoadDelay);
+			Time.timeScale = 1f;
+			var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+			SceneManager.LoadScene(currentSceneIndex+ 1 );
+	} */
+
+
 
 }
