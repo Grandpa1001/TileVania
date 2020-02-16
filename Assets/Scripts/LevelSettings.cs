@@ -17,6 +17,7 @@ public class LevelSettings : MonoBehaviour
   private GameObject KnobUI;
   private GameObject KnobBackgroundUI;
   private GameObject UI_Canvas;
+  private GameObject UIPauseMenu;
 
 
   public int StartScreen;
@@ -49,7 +50,7 @@ public class LevelSettings : MonoBehaviour
       BowUI = GameObject.Find("GameSession/Joystick canvas/Button_Arrow");
       SwordUI= GameObject.Find("GameSession/Joystick canvas/Button_Sword");
       UI_Canvas = GameObject.Find("GameSession/UI_Canvas");
-
+      UIPauseMenu = GameObject.Find("GameSession/Joystick canvas/PauseMenu");
     }
 
 public void TurnOffUIChange(){TurnOffUIAll = true;}
@@ -96,6 +97,7 @@ void CheckWhatLevelIsNow(){
     BowUI.SetActive(false);
     SwordUI.SetActive(false);
     JumpUI.SetActive(false);
+    UIPauseMenu.SetActive(false);
     }else{
 
   if(numberCurrentLevel == StartScreen ){
@@ -106,6 +108,7 @@ void CheckWhatLevelIsNow(){
     BowUI.SetActive(false);
     SwordUI.SetActive(false);
     JumpUI.SetActive(false);
+    UIPauseMenu.SetActive(false);
     }
 
 
@@ -117,6 +120,7 @@ void CheckWhatLevelIsNow(){
     BowUI.SetActive(false);
     SwordUI.SetActive(false);
     JumpUI.SetActive(false);
+    UIPauseMenu.SetActive(false);
 }
 
   // Pierwszy Poziom tutorial skoku
@@ -128,6 +132,7 @@ void CheckWhatLevelIsNow(){
     FireBallUI.SetActive(false);
     BowUI.SetActive(false);
     SwordUI.SetActive(false);
+    UIPauseMenu.SetActive(true);
   }
     //Drugi Poziom Miecz
   if(numberCurrentLevel == Poziom_1_2){
@@ -138,6 +143,7 @@ void CheckWhatLevelIsNow(){
     JumpUI.SetActive(true);
     FireBallUI.SetActive(false);
     BowUI.SetActive(false);
+    UIPauseMenu.SetActive(true);
     //SwordUI.SetActive(false); do zdobycia w tym poziomie
   }
 
@@ -149,6 +155,7 @@ void CheckWhatLevelIsNow(){
     FireBallUI.SetActive(false);
     BowUI.SetActive(false);
     SwordUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
   }
   if(numberCurrentLevel == Poziom_1_4){
     UI_Canvas.SetActive(true);
@@ -158,6 +165,7 @@ void CheckWhatLevelIsNow(){
     FireBallUI.SetActive(false);
     BowUI.SetActive(false);
     SwordUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
   }
   if(numberCurrentLevel == Poziom_2_1){
     UI_Canvas.SetActive(true);
@@ -165,6 +173,7 @@ void CheckWhatLevelIsNow(){
     KnobBackgroundUI.SetActive(true);
     JumpUI.SetActive(true);
     FireBallUI.SetActive(false);
+    UIPauseMenu.SetActive(true);
     //BowUI.SetActive(false); do zdobycia na tym poziomie
     SwordUI.SetActive(true);
   }
@@ -175,6 +184,7 @@ void CheckWhatLevelIsNow(){
     JumpUI.SetActive(true);
     FireBallUI.SetActive(false);
     BowUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
     SwordUI.SetActive(true);
   }
   if(numberCurrentLevel == Poziom_2_3){
@@ -185,6 +195,7 @@ void CheckWhatLevelIsNow(){
     FireBallUI.SetActive(false);
     BowUI.SetActive(true);
     SwordUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
   }
   if(numberCurrentLevel == Poziom_2_4){
     UI_Canvas.SetActive(true);
@@ -194,6 +205,7 @@ void CheckWhatLevelIsNow(){
     FireBallUI.SetActive(false);
     BowUI.SetActive(true);
     SwordUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
   }
   if(numberCurrentLevel == Poziom_3_1){
     UI_Canvas.SetActive(true);
@@ -203,6 +215,7 @@ void CheckWhatLevelIsNow(){
   //  FireBallUI.SetActive(false); do zdobycia na tym poziomie
     BowUI.SetActive(true);
     SwordUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
   }
   if(numberCurrentLevel == Poziom_3_2){
     UI_Canvas.SetActive(true);
@@ -211,6 +224,7 @@ void CheckWhatLevelIsNow(){
     JumpUI.SetActive(true);
     FireBallUI.SetActive(true);
     BowUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
     SwordUI.SetActive(true);
   }
   if(numberCurrentLevel == Poziom_3_3){
@@ -221,6 +235,7 @@ void CheckWhatLevelIsNow(){
     FireBallUI.SetActive(true);
     BowUI.SetActive(true);
     SwordUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
   }
   if(numberCurrentLevel == Poziom_3_4){
     UI_Canvas.SetActive(true);
@@ -230,6 +245,7 @@ void CheckWhatLevelIsNow(){
     FireBallUI.SetActive(true);
     BowUI.SetActive(true);
     SwordUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
   }
 
   if(numberCurrentLevel == Poziom_TEST){
@@ -240,6 +256,7 @@ void CheckWhatLevelIsNow(){
     FireBallUI.SetActive(true);
     BowUI.SetActive(true);
     SwordUI.SetActive(true);
+    UIPauseMenu.SetActive(true);
   }
 
 }
