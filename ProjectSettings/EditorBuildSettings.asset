@@ -56,9 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level_EndScreen.unity
     guid: b03e6f925d0d23a45a676ccb6d9a674c
-  - enabled: 1
-    path: Assets/Levels/Level_Death.unity
-    guid: 6771202c903d8684a8b312124488f5d1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Levels/LevelWatterGoUP.unity
     guid: fdb655a4847b93b4daf48acc3dbc80c3
