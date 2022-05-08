@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class platform : MonoBehaviour
 {
@@ -65,16 +66,12 @@ private PlatformEffector2D effector;
         }
         
 
-
-
-
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.transform.SetParent(transform);
-         Debug.Log ("pojawia sie kolizja");
+        // Debug.Log ("pojawia sie kolizja");
     }
     private void OnCollisionExit2D(Collision2D collision)
     {

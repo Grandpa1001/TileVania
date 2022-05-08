@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8952778398671218078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovedPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8952778398984138173}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point1
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8952778400128246104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point2
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -164,6 +164,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 8306244456729859783, guid: e28b599c97c1f1d4fa72fcbf96792e18,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8306244456729859786, guid: e28b599c97c1f1d4fa72fcbf96792e18,
         type: 3}
       propertyPath: speed
@@ -204,11 +209,36 @@ PrefabInstance:
       propertyPath: m_ColliderMask.m_Bits
       value: 1024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8306244456729859786, guid: e28b599c97c1f1d4fa72fcbf96792e18, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e28b599c97c1f1d4fa72fcbf96792e18, type: 3}
+--- !u!1 &8952778400120931973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8306244456729859783, guid: e28b599c97c1f1d4fa72fcbf96792e18,
+    type: 3}
+  m_PrefabInstance: {fileID: 1115518139125157954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8952778400120931974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8306244456729859780, guid: e28b599c97c1f1d4fa72fcbf96792e18,
     type: 3}
   m_PrefabInstance: {fileID: 1115518139125157954}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1073380467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8952778400120931973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40072eb2ff25fa419992d1375a6babc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moving: 1
+  speed: 1
+  startingPoint: 0
+  points:
+  - {fileID: 8952778398984138173}
+  - {fileID: 8952778400128246104}

@@ -37,12 +37,12 @@ public class FireBallLife : MonoBehaviour
     private void HitGround()
     {
       if(boxHitBall.IsTouchingLayers(LayerMask.GetMask("Ground"))){
-        DestroyObject(gameObject);
+        Destroy(gameObject);
         return;}
     }
     private void HitEnemy(){
       if(boxHitBall.IsTouchingLayers(LayerMask.GetMask("Enemy"))){
-       DestroyObject(gameObject);
+       Destroy(gameObject);
 
         Hit_FireBall();
         //FindObjectOfType<Enemy>().ProcessEnemyDeath();
@@ -50,7 +50,7 @@ public class FireBallLife : MonoBehaviour
     }
     private void HitObjectToDestroy(){
       if(boxHitBall.IsTouchingLayers(LayerMask.GetMask("ObjectToDestroy"))){
-       DestroyObject(gameObject);
+       Destroy(gameObject);
 
         Hit_FireBall();
         //FindObjectOfType<Enemy>().ProcessEnemyDeath();

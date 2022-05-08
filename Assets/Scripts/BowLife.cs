@@ -41,13 +41,13 @@ public class BowLife : MonoBehaviour
   private void HitEnemy(){
     if(boxHitArrow.IsTouchingLayers(LayerMask.GetMask("Enemy"))){
       Hit_Arrow();
-      DestroyObject(gameObject);
+      Destroy(gameObject);
       //FindObjectOfType<Enemy>().ProcessEnemyDeath();
       return;}
     }
     private void HitObjectToDestroy(){
       if(boxHitArrow.IsTouchingLayers(LayerMask.GetMask("ObjectToDestroy"))){
-       DestroyObject(gameObject);
+       Destroy(gameObject);
 
         Hit_Arrow();
         //FindObjectOfType<Enemy>().ProcessEnemyDeath();

@@ -72,7 +72,7 @@ namespace UnityEditor
 		private SerializedProperty m_Prefabs;
 		private SerializedObject m_SerializedObject;
 
-		protected void OnEnable()
+		 protected override void OnEnable()
 		{
 		m_SerializedObject = new SerializedObject(target);
 		m_Prefabs = m_SerializedObject.FindProperty("m_Prefabs");
